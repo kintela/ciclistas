@@ -77,6 +77,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Codigo\aplicacion_ciclistas.js" />
+    <Content Include="Codigo\Controladores\DetalleCiclistaController.js" />
+    <Content Include="Codigo\Controladores\ListadoController.js" />
     <Content Include="Codigo\Vistas\FichaCiclista.html" />
     <Content Include="Codigo\Vistas\Palmares.html" />
     <Content Include="Estilos\estilos.css" />
@@ -902,9 +905,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Codigo\Controladores\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
