@@ -1,0 +1,19 @@
+﻿<div class="recuadro">
+    <strong lang="es-es">Búsqueda por Nombre</strong>
+    <input ng-model="ciclista.Nombre" />
+    <br/>
+    <strong>Criterio de Ordenacion</strong>
+    <select ng-model="campoOrdenacion">
+        <option value="Nombre">Nombre</option>
+        <option value="Equipo">Equipo</option>
+    </select>
+    <select ng-model="direccion">
+        <option value="false">Ascendente</option>
+        <option value="true">Descendente</option>
+    </select>
+</div>
+<ul>
+    <li ng-repeat="ciclista in ciclistas | filter:ciclista.Nombre | orderBy:campoOrdenacion:direccion">
+        <div ng-include data-src="'Codigo/Vistas/FichaCiclista.html'"></div>
+    </li>
+</ul>
