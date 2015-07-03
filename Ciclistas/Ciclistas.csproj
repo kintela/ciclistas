@@ -77,13 +77,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app.js" />
     <Content Include="Codigo\aplicacion_ciclistas.js" />
     <Content Include="Codigo\Controladores\DetalleCiclistaController.js" />
     <Content Include="Codigo\Controladores\ListadoController.js" />
     <Content Include="Codigo\Vistas\FichaCiclista.html" />
     <Content Include="Codigo\Vistas\Palmares.html" />
-    <Content Include="Content\jasmine\jasmine.css" />
-    <Content Include="Content\jasmine\jasmine_favicon.png" />
     <Content Include="Estilos\estilos.css" />
     <Content Include="Fotos\Contador.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -103,6 +102,7 @@
     <Content Include="index.html" />
     <Content Include="Codigo\Vistas\Listado.html" />
     <Content Include="Principal.html" />
+    <Content Include="Pruebas.js" />
     <Content Include="scripts\ai.0.15.0-build12287.js" />
     <Content Include="scripts\ai.0.15.0-build12287.min.js" />
     <Content Include="scripts\angular-animate.js" />
@@ -873,18 +873,10 @@
     <Content Include="scripts\i18n\angular-locale_zh.js" />
     <Content Include="scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="scripts\i18n\angular-locale_zu.js" />
-    <Content Include="scripts\jasmine-samples\Player.js" />
-    <Content Include="scripts\jasmine-samples\PlayerSpec.js" />
-    <Content Include="scripts\jasmine-samples\Song.js" />
-    <Content Include="scripts\jasmine-samples\SpecHelper.js" />
-    <Content Include="scripts\jasmine\boot.js" />
-    <Content Include="scripts\jasmine\console.js" />
-    <Content Include="scripts\jasmine\jasmine-html.js" />
-    <Content Include="scripts\jasmine\jasmine.js" />
+    <Content Include="Testing.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\JasmineController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -909,7 +901,6 @@
     <Content Include="scripts\angular-cookies.min.js.map" />
     <Content Include="scripts\angular-aria.min.js.map" />
     <Content Include="scripts\angular-animate.min.js.map" />
-    <Content Include="Views\Jasmine\SpecRunner.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -917,7 +908,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
