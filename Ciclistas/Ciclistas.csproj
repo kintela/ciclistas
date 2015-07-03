@@ -82,6 +82,8 @@
     <Content Include="Codigo\Controladores\ListadoController.js" />
     <Content Include="Codigo\Vistas\FichaCiclista.html" />
     <Content Include="Codigo\Vistas\Palmares.html" />
+    <Content Include="Content\jasmine\jasmine.css" />
+    <Content Include="Content\jasmine\jasmine_favicon.png" />
     <Content Include="Estilos\estilos.css" />
     <Content Include="Fotos\Contador.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -871,9 +873,18 @@
     <Content Include="scripts\i18n\angular-locale_zh.js" />
     <Content Include="scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="scripts\i18n\angular-locale_zu.js" />
+    <Content Include="scripts\jasmine-samples\Player.js" />
+    <Content Include="scripts\jasmine-samples\PlayerSpec.js" />
+    <Content Include="scripts\jasmine-samples\Song.js" />
+    <Content Include="scripts\jasmine-samples\SpecHelper.js" />
+    <Content Include="scripts\jasmine\boot.js" />
+    <Content Include="scripts\jasmine\console.js" />
+    <Content Include="scripts\jasmine\jasmine-html.js" />
+    <Content Include="scripts\jasmine\jasmine.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\JasmineController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -898,6 +909,7 @@
     <Content Include="scripts\angular-cookies.min.js.map" />
     <Content Include="scripts\angular-aria.min.js.map" />
     <Content Include="scripts\angular-animate.min.js.map" />
+    <Content Include="Views\Jasmine\SpecRunner.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
