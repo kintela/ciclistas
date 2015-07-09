@@ -83,7 +83,9 @@
     <Content Include="Codigo\Controladores\ListadoController.js" />
     <Content Include="Codigo\Vistas\FichaCiclista.html" />
     <Content Include="Codigo\Vistas\Palmares.html" />
+    <Content Include="Directivas.html" />
     <Content Include="Estilos\estilos.css" />
+    <Content Include="Estilos\StyleSheet1.css" />
     <Content Include="Fotos\Contador.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
