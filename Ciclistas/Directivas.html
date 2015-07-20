@@ -7,11 +7,20 @@
     <link href="Estilos/StyleSheet1.css" rel="stylesheet" />
 </head>
 <body ng-app="">
+    <script>
+        function Controlador($scope) {
+            $scope.Nombre = "Este es el nombre";
+            $scope.OtroDato = "Más información";
+        }
+    </script>
     <h2>Directivas y ng-binding</h2>
-    <input type="text" ng-model="modelo"/>
-    <span>{{modelo}}</span>
-    <div ng-class="{{modelo}}">
-        Texto cualquiera
+    <div ng-controller="Controlador">
+        <input type="text" ng-model="modelo" />
+        <span>{{modelo}}</span>
+        <p ng-bind-template="Primer elemento del modelo: {{Nombre}}, Segundo elemento: {{OtroDato}}"></p>
+        <div class="{{modelo}}">
+            Texto cualquiera
+        </div>
     </div>
 </body>
 </html>
