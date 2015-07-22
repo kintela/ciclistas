@@ -6,12 +6,13 @@
     <script src="scripts/angular.js"></script>
     <link href="Estilos/StyleSheet1.css" rel="stylesheet" />
 </head>
-<body ng-app="">
+<body ng-app="aplicacion">
     <script>
-        function Controlador($scope) {
+        var app = angular.module("aplicacion", []);
+        app.controller("Controlador", function Controlador($scope) {
             $scope.Nombre = "Este es el nombre";
             $scope.OtroDato = "Más información";
-        }
+        });        
     </script>
     <h2>Directivas y ng-binding</h2>
     <div ng-controller="Controlador">
