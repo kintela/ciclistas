@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="scripts/jquery-2.1.4.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/angular.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        div {
+            font-family:Consolas;
+            font-size:15px;
+            font-weight:bold;
+            border:2px solid navy;
+            margin:5px;
+            padding:10px;
+        }
+    </style>
+</head>
+<body ng-app="appCiclismo">
+    <h3>Formularios</h3>
+    <div ng-controller="Controlador">
+        <form novalidate>
+            Nombre: <input type="text" ng-model="usuario.name" /><br />
+            E-mail: <input type="email" ng-model="usuario.email" /><br />
+            Fecha: <input type="date" ng-model="usuario.fecha" /><br />
+            Género: <input type="radio" ng-model="usuario.genero" value="hombre" />hombre
+            <input type="radio" ng-model="usuario.genero" value="mujer" />mujer<br /><br/>
+            <button ng-click="deshacer()">Deshacer</button>&nbsp;
+            <button ng-click="guardar(usuario)">Guardar</button>
+        </form><br />
+        <pre>Valores formulario={{usuario | json}}</pre>
+        <pre>Valores originales={{original | json}}</pre>
+    </div>
+    <script>
+        var appCiclismo = angular.module('appCiclismo', []);
+        appCiclismo.controller("Controlador", function ($scope) {
+            $scope.original = {};
+            $scope.guardar = function (usuario) {
+                $scope.original = angular.copy(usuario);
+            };
+            $scope.deshacer = function () {
+                $scope.usuario = angular.copy($scope.original);
+            };            
+        });
+    </script>
+</body>
+</html>

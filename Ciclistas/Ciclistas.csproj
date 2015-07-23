@@ -77,15 +77,24 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="aplicacion.js" />
     <Content Include="app.js" />
     <Content Include="Codigo\aplicacion_ciclistas.js" />
     <Content Include="Codigo\Controladores\DetalleCiclistaController.js" />
     <Content Include="Codigo\Controladores\ListadoController.js" />
     <Content Include="Codigo\Vistas\FichaCiclista.html" />
     <Content Include="Codigo\Vistas\Palmares.html" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Directivas.html" />
+    <Content Include="Directivas2.html" />
+    <Content Include="Directivas3.html" />
+    <Content Include="Directivas4.html" />
     <Content Include="Estilos\estilos.css" />
     <Content Include="Estilos\StyleSheet1.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Fotos\Contador.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -132,6 +141,8 @@
     <Content Include="scripts\angular-touch.min.js" />
     <Content Include="scripts\angular.js" />
     <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="scripts\i18n\angular-locale_aa-er.js" />
     <Content Include="scripts\i18n\angular-locale_aa-et.js" />
@@ -875,6 +886,12 @@
     <Content Include="scripts\i18n\angular-locale_zh.js" />
     <Content Include="scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="scripts\i18n\angular-locale_zu.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="scripts\jquery-2.1.4.js" />
+    <Content Include="scripts\jquery-2.1.4.min.js" />
     <Content Include="Testing.html" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -903,6 +920,7 @@
     <Content Include="scripts\angular-cookies.min.js.map" />
     <Content Include="scripts\angular-aria.min.js.map" />
     <Content Include="scripts\angular-animate.min.js.map" />
+    <Content Include="scripts\jquery-2.1.4.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
