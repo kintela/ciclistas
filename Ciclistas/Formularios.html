@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Demo formularios</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <script src="scripts/jquery-2.1.4.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/angular.js"></script>
+    <style>
+        form, fieldset {
+            padding:9px;
+            margin:9px;
+            border:2px solid navy;
+        }
+    </style>
+</head>
+<body ng-app="">
+    <form>
+        <h3>Información del corredor</h3>
+        <label>Email</label>
+        <input type="email" ng-model="usuario.email" ng-required="true" /></br>
+        <label>Apellidos</label>
+        <input type="text" ng-model="usuario.apellido"/></br>
+        <label>Nombre</label>
+        <input type="text" ng-model="usuario.nombre" /></br>
+        <label>Sitio Web</label>
+        <input type="url" ng-model="usuario.sitioweb" /></br>
+        <label>Descripción</label>
+        <textarea ng-model="usuario.descripcion"></textarea></br>
+        <label>Password</label>
+        <input type="password" ng-model="usuario.password" ng-minlength="6" ng-maxlength="12" ng-pattern="^.*(?=.{6,})(?=.*[a-zA-Z])[a-zA-Z0-9]+$" /></br>
+        <label>Password (repetición)</label>
+        <input type="password" ng-model="repetirPassword" /></br>
+        <label for="esAdmin">Es administrador</label>
+        <input id="esAdmin" type="checkbox" ng-model="usuario.administrador" ng-true-value="Administrador" ng-false-value="Basica" />
+    </form>
+    <pre ng-bind="usuario | json"></pre>
+</body>
+</html>

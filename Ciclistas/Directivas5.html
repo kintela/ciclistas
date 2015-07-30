@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html ng-app="miApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Crear Directivas</title>
+    <script src="scripts/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div ng-controller="ControladorBusquedas" style="margin:20px">
+        <h1>Buscar Corredores</h1>
+        <caja-busqueda texto-a-buscar="corredoresBuscados"></caja-busqueda>
+        <resultados-busqueda resultados="corredoresEncontrados"
+                             texto-a-buscar="corredoresBuscados"></resultados-busqueda>
+    </div>
+</body>
+</html>
