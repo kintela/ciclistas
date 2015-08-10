@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Demo formularios</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <script src="scripts/jquery-2.1.4.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/angular.js"></script>
+    <style>
+        form, fieldset {
+            padding:9px;
+            margin:9px;
+            border:2px solid navy;
+        }
+    </style>
+</head>
+<body ng-app="">
+    <form>
+        <h3>Opciones avanzadas de select</h3>
+        <label>Seleccionar usuario usando email como etiqueta</label>
+        <select ng-model="emailSeleccionado" 
+                ng-options="usuario.email for usuario in usuarios"></select></br>
+        <span>Usuario seleccionado:</span>{{emailSeleccionado}}</br>
+        <label>Seleccionar usuario usando un valor calculado como etiqueta</label>
+        <select ng-model="NombreCompleto" 
+                ng-options="NombreCompleto(usuario) for usuario in usuarios"></select></br>
+        <span>Usuario seleccionado:</span>{{NombreCompleto}}</br>
+        <label for="SelectorEmail">Email (selección por nombre)</label>
+        <select id="SelectorEmail" ng-model="usuarioSeleccionado" 
+                ng-options="usuario.email as NombreCompleto(usuario) for usuario in usuarios"></select></br>
+        <span>Email seleccionado:</span>{{usuarioSeleccionado}}</br>
+        <label for="SelectorEmail">Como el anterior pero mostrando agrupaciones</label>
+        <select id="SelectorEmail" ng-model="usuarioSeleccionadoConGrupos"
+                ng-options="usuario.email as NombreCompleto(usuario) group by usuario.pais for usuario in usuarios"></select></br>
+        <span>Email seleccionado:</span>{{usuarioSeleccionado}}</br>
+</body>
+</html>
