@@ -8,14 +8,52 @@
     <script src="scripts/jquery-2.1.4.js"></script>
     <script src="scripts/bootstrap.js"></script>
     <script src="scripts/angular.js"></script>
+    <script src="Aplicacion2.js"></script>
     <style>
         form, fieldset {
             padding:9px;
             margin:9px;
             border:2px solid navy;
         }
+        .ng-pristine {
+            border:2px solid green;
+        }
+
+        .ng-dirty {
+            border:2px solid red;
+        }
     </style>
 </head>
+
+<body ng-app="Aplicacion" ng-controller="controlador">
+   <h1>Información de usuario</h1>
+    <form name="Formulario">
+        <label>E-mail</label>
+        <input type="email" ng-model="usuario.email" name="email" required />
+        <span ng-show="mostrarError(Formulario.email,'email')">
+            La dirección de correo debe ser válida
+        </span>
+        <span ng-show="mostrarError(Formulario.email,'required')">
+            campo obligatorio
+        </span>
+
+        <input type="submit" name="btnEnvio" value="Enviar" ng-disabled="!envioValido();"/>
+    </form>
+    Datos del email: <pre ng-bind="cadenaJSON(usuario)"></pre>
+</body>
+
+<!--<body ng-app="Aplicacion" ng-controller="controlador">
+    <h3>Opciones avanzadas de select/option</h3>
+    <label>Selecciona un pais por código ordenado por el código</label>
+    <select ng-model="paisSeleccionado"
+            ng-options="pais as codigo for (codigo,pais) in paisesPorCodigo"></select></br>
+    Pais seleccionado: {{paisSeleccionado}}</br>
+
+    <label>Selecciona un código por paises ordenado por pais</label>
+    <select ng-model="codigoSeleccionado"
+            ng-options="codigo as pais for (pais,codigo) in codigosPorPais"></select></br>
+    Codigo seleccionado: {{codigoSeleccionado}}
+</body>
 <body ng-app="Aplicacion" ng-controller="controlador">
     <form>
         <h3>Opciones avanzadas de select</h3>
@@ -34,6 +72,7 @@
         <label for="SelectorEmail">Como el anterior pero mostrando agrupaciones</label>
         <select id="SelectorEmail" ng-model="usuarioSeleccionadoConGrupos"
                 ng-options="usuario.email as NombreCompleto(usuario) group by usuario.pais for usuario in usuarios"></select></br>
-        <span>Email seleccionado:</span>{{usuarioSeleccionado}}</br>
-</body>
+        <span>Email seleccionado:</span>{{usuarioSeleccionadoConGrupos}}</br>
+</body>-->
 </html>
+

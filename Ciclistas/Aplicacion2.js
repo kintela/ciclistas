@@ -1,6 +1,6 @@
 ﻿var app = angular.module('Aplicacion', []);
 
-app.controler('controlador', function ($scope) {
+app.controller('controlador', function ($scope) {
     $scope.usuarios = [
         { nombre: 'Vicenzo', apellidos: 'Nibali', email: 'vicenzo@nibali.com', pais: 'Italia' },
         { nombre: 'Alejandro', apellidos: 'Valverde', email: 'alejandro@valverde.com', pais: 'España' },
@@ -23,5 +23,18 @@ app.controler('controlador', function ($scope) {
         'ITALIA': 'IT',
         'R. UNIDO': 'UK'
     };
+
+    $scope.mostrarError = function (correo,error) {
+        return correo.$error[error];
+    };
+
+    $scope.cadenaJSON = function (objeto) {
+        return JSON.stringify(objeto, null, 2);
+    };
+
+    $scope.envioValido = function () {
+        return $scope.Formulario.$dirty &&
+               $scope.Formulario.$valid;
+    }
 
 });
