@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="aplicacion.js" />
+    <Content Include="Aplicacion2.js" />
     <Content Include="app.js" />
     <Content Include="Codigo\aplicacion_ciclistas.js" />
     <Content Include="Codigo\Controladores\DetalleCiclistaController.js" />
