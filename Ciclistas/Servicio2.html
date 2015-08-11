@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Demo inicial con FireBase</title>
+    <script src="scripts/angular.js"></script>
+    <script type="text/javascript" src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+    <script src="scripts/angularfire.js"></script>
+    <script src="Aplicacion2.js"></script>
+</head>
+<body ng-app="">
+    <h1>Acceso a Firebase</h1>
+    <div>
+        <input type="text"  ng-model="datosFB.Nombre" />
+        <script>
+            var datos = "Aquí los datos";
+            var dataRef = new Firebase('https://flickering-fire-9197.firebaseio.com/');
+
+            dataRef.child("0").on("value", function () {
+                alert(JSON.stringify(datosFB.val()));
+            });
+        </script>
+        <pre>{{datosFB.Nombre}}</pre>
+    </div>
+</body>
+<!--<body ng-app="ModuloFB" ng-controller="ControladorFB">
+    <h2>Mejores contrarelojistas en 2013 (Ranking UCI)</h2>
+
+    <ul ng-repeat="cr in contrarelojistas">
+        <li>{{ cr.Puesto}} - {{ cr.Nombre }} ( {{ cr.Pais }} ) </li>
+    </ul>
+</body>-->
+</html>

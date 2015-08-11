@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <script src="scripts/jquery-2.1.4.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/angular.js"></script>
+    <script src="Aplicacion3.js"></script>
+</head>
+<body ng-app="Aplicacion" ng-controller="controlador">
+    <h1>Envíos de información</h1>
+    <form ng-submit="mostrarAlerta(dato)">
+        <input type="text" ng-model="dato" />
+        <button>Enviar</button>
+    </form>
+</body>
+</html>

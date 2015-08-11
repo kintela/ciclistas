@@ -79,7 +79,10 @@
   <ItemGroup>
     <Content Include="aplicacion.js" />
     <Content Include="Aplicacion2.js" />
+    <Content Include="Aplicacion3.js" />
+    <Content Include="App2.js" />
     <Content Include="app.js" />
+    <Content Include="ApServicio.js" />
     <Content Include="Codigo\aplicacion_ciclistas.js" />
     <Content Include="Codigo\Controladores\DetalleCiclistaController.js" />
     <Content Include="Codigo\Controladores\ListadoController.js" />
@@ -89,16 +92,19 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="declaraciones.js" />
     <Content Include="Directivas.html" />
     <Content Include="Directivas2.html" />
     <Content Include="Directivas3.html" />
     <Content Include="Directivas4.html" />
     <Content Include="Directivas5.html" />
+    <Content Include="Envios.html" />
     <Content Include="Estilos\estilos.css" />
     <Content Include="Estilos\StyleSheet1.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Formularios2.html" />
     <Content Include="Formularios.html" />
+    <Content Include="FormulariosAnidados.html" />
     <Content Include="Fotos\Contador.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -117,6 +123,7 @@
     <Content Include="index.html" />
     <Content Include="Codigo\Vistas\Listado.html" />
     <Content Include="Principal.html" />
+    <Content Include="providers.js" />
     <Content Include="Pruebas.js" />
     <Content Include="scripts\ai.0.15.0-build12287.js" />
     <Content Include="scripts\ai.0.15.0-build12287.min.js" />
@@ -145,8 +152,12 @@
     <Content Include="scripts\angular-touch.min.js" />
     <Content Include="scripts\angular.js" />
     <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\angularfire.js" />
+    <Content Include="scripts\angularfire.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\firebase-debug.js" />
+    <Content Include="scripts\firebase.js" />
     <Content Include="scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="scripts\i18n\angular-locale_aa-er.js" />
     <Content Include="scripts\i18n\angular-locale_aa-et.js" />
@@ -896,6 +907,10 @@
     <None Include="scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="scripts\jquery-2.1.4.js" />
     <Content Include="scripts\jquery-2.1.4.min.js" />
+    <Content Include="Servicio1.html" />
+    <Content Include="Servicio2.html" />
+    <Content Include="Servicios4.html" />
+    <Content Include="Servivios3.html" />
     <Content Include="Testing.html" />
     <Content Include="Web.config" />
   </ItemGroup>

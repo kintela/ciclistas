@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <script src="scripts/jquery-2.1.4.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+    <script src="scripts/angular.js"></script>
+
+    
+</head>
+<body ng-app="">
+    <script type="text/ng-template" id="frmContraseña">
+        <ng-form name="frmContraseña">
+            <div ng-show="usuario.password != usuario.password2">
+                Las contraseñas no coinciden
+            </div>
+            <label>Contraseña</label>
+            <input ng-model="usuario.password" type="password" required>
+            <label>Confirmar contraseña</label>
+            <input ng-model="usuario.password2" type="password" required>
+        </ng-form>
+    </script>
+    <form name="form1" novalidate>
+        <label>Datos de autenticación</label><br />
+        <label>Nombre</label>
+        <input ng-model="usuario.nombre" required>
+        </br>
+        <ng-include src="'frmContraseña'" />
+    </form>
+</body>
+</html>
