@@ -98,6 +98,7 @@
     <Content Include="Directivas3.html" />
     <Content Include="Directivas4.html" />
     <Content Include="Directivas5.html" />
+    <Content Include="DOM.html" />
     <Content Include="Envios.html" />
     <Content Include="Estilos\estilos.css" />
     <Content Include="Estilos\StyleSheet1.css" />
@@ -123,6 +124,8 @@
     <Content Include="index.html" />
     <Content Include="Codigo\Vistas\Listado.html" />
     <Content Include="Principal.html" />
+    <Content Include="promise.html" />
+    <Content Include="promise.js" />
     <Content Include="providers.js" />
     <Content Include="Pruebas.js" />
     <Content Include="scripts\ai.0.15.0-build12287.js" />

@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Demo de Acceso a Datos mediante promises</title>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/firebase.js"></script>
+    <script src="scripts/angularfire.js"></script>
+    <script src="promise.js"></script>
+</head>
+<body ng-app="app" ng-controller="controlador">
+    <div>Esto es una demo de promises que accede a datos de un servicio</div>
+    <ul ng-repeat="cr in ciclistas | orderByPriority">
+        <li>{{ cr.Puesto}} - {{ cr.Nombre }} ( {{cr.Pais}} ) </li>
+    </ul>
+</body>
+</html>

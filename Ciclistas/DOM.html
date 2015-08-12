@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-sanitize.js"></script>
+</head>
+<body ng-app="app" ng-controller="controlador">
+    <script>
+        angular.module("app", ["ngSanitize"])
+           .controller("controlador", function ($scope) {
+               $scope.datosHTML =
+                   "<p>Estos datos <b onmouseover=alert('¡Ataque!')>son</b> peligrosos</p>";
+               $scope.$watch("datosHTML", function (nuevoValor) {
+                   $scope.datosHTML = $sanitize(nuevoValor);
+               });
+           });
+    </script>
+    <div>
+        <p><input ng-model="datosHTML" style="width:600px;" /></p>
+        <p>{{datosHTML}}</p>
+        <p ng-bind-html="datosHTML"></p>
+    </div>
+</body>
+
+</html>
